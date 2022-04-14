@@ -23,7 +23,7 @@ namespace RenameDirectlyLinkedDynVars
         public override string Author => "Banane9";
         public override string Link => "https://github.com/Banane9/NeosRenameDirectlyLinkedDynVars";
         public override string Name => "RenameDirectlyLinkedDynVars";
-        public override string Version => "1.0.0";
+        public override string Version => "1.1.0";
 
         public override void OnEngineInit()
         {
@@ -48,7 +48,7 @@ namespace RenameDirectlyLinkedDynVars
                 __instance.Slot.ForeachComponentInChildren<IDynamicVariable>(dynVar =>
                 {
                     DynamicVariableHelper.ParsePath(dynVar.VariableName, out string spaceName, out string variableName);
-                    if (spaceName == null || spaceName != ____lastName)
+                    if (spaceName == null || Traverse.Create(dynVar).Field("handler").Field("_currentSpace").GetValue() != __instance)
                         return;
 
                     var nameField = ((Worker)dynVar).TryGetField<string>("VariableName") ?? ((Worker)dynVar).TryGetField<string>("_variableName");
