@@ -1,7 +1,10 @@
 Rename Directly Linked DynVars
 ==============================
 
-A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) that alloww changing any directly linked dynamic variables when renaming the Dynamic Variable Space. 
+A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) that allows changing any directly linked dynamic variables when renaming the Dynamic Variable Space.\\
+Optionally, LogiX string inputs matching `OldName/.*` can be changed too.
+
+This was based on a request from seif1 on the Neos Modding Discord.
 
 ## Installation
 1. Install [NeosModLoader](https://github.com/zkxs/NeosModLoader).
